@@ -89,7 +89,7 @@ exports.likeBlog = catchAsyncError(async (req, res, next) => {
         return next(new ErrorHandler(500, " you cant Like your own post"))
     }
 
-    console.log(blog.likes);
+    // console.log(blog.likes);
     if (blog.likes.includes(userId)) {
         // return next(new ErrorHandler(500, " you already likes this post"))
         await Blogs.findByIdAndUpdate(req.body.BlogId, {

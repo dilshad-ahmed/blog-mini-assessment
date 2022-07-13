@@ -20,7 +20,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.4",
     "validator": "^13.7.0"
-  },
-  "proxy": "http://localhost:4000"
+  }
 
 }

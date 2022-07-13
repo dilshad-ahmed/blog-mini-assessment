@@ -10,11 +10,11 @@ const isAuthenticated = catchAsyncError(async (req, res, next) => {
         return next(new ErrorHandler(500, "login to access this resource"))
     }
 
-    console.log(token)
+    // console.log(token)
     const data = jwt.verify(token, process.env.JWT_SECRET);
 
     req.user = await Users.findById(data.id)
-    console.log(req.user)
+    // console.log(req.user)
 
     next()
 
